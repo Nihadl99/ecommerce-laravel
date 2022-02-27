@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\CategorieController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ProduitsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,22 +15,17 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//Route correspondant à l'accueil
 Route::get('/', function () {
-    return view('Home');
+    return view('accueil');
 });
 
-
-route::get('/produits', function (){
-    return view('produit');
-});
-Route::get('/produits/{id}/12-iphone-xs' , function($id){
-    return view('show',['id'=>$id]);
-});
-route::get('/categorie/{id}/12-smartphone' , function($id){
-    return view('show',['id'=>$id]);
-});
-route::get('/{id}' , function ($id){
-    return 'REDIRECT TO' .$id;
-});
+// Route correspondant aux produits 
+Route::get('/produits', [ProduitsController::class,'index']);
+Route::get('/produits/{product}', [ProduitsController::class,'show']);
+//Route corespondant aux categories
+Route::get('/categorie', [CategorieController::class,'index']);
+Route::get('/categorie/{category}',[CategorieController::class,'show']);
+//Route corerspondant aux contact
+Route::get('/contact', [ContactController::class,'index']);
 
