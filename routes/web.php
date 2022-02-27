@@ -24,8 +24,8 @@ Route::get('/', function () {
 Route::get('/produits', [ProduitsController::class,'index']);
 Route::get('/produits/{product}', [ProduitsController::class,'show']);
 //Route corespondant aux categories
-Route::get('/categorie', [CategorieController::class,'index']);
+//Route::get('/categorie', [CategorieController::class,'index']);
 Route::get('/categorie/{category}',[CategorieController::class,'show']);
-//Route corerspondant aux contact
+//Route corerspondant aux contacts
 Route::get('/contact', [ContactController::class,'index']);
 
