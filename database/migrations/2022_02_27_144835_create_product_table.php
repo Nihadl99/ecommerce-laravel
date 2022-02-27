@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text('description');
             $table->double('original_price');
             $table->double('discount_price');
-            $table->string('')->nullable();
+            $table->string('created_at')->nullable();
             $table->timestamps();
 
         });
