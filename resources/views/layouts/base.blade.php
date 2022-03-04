@@ -31,6 +31,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/contact">Contact</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/test/categories">Categories</a>
+                    
+                </li>
+
             </ul><form class="form-inline my-2 my-lg-0 d-inline-flex">
                 <div class="input-group input-group-sm">
                     <input type="text" class="form-control" placeholder="Recherche...">
